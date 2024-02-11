@@ -48,14 +48,14 @@ class Solution:
             diff = target - d
             t = i + 1
             if diff in nums[t:]:
-                return [nums.index(d), nums[t:].index(diff) + t]
+                return [i, nums[t:].index(diff) + t]
 
 
-inputs = (
+data = (
     ([3, 2, 4], 6, [1, 2]),
-    ([2, 7, 11, 15], 9, [0, 1]),
+    ([8, 2, 3, 6, 7, 11, 15], 9, [1, 4]),
     ([3, 3], 6, [0, 1]),
 )
 obj = Solution()
-for l, t, e in inputs:
+for l, t, e in data:
     assert obj.two_sum(l, t) == e
